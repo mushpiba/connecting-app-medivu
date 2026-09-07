@@ -140,6 +140,10 @@ const styles = StyleSheet.create({
   },
   splashOverlay: {
     ...StyleSheet.absoluteFill,
+    // 디자인 토큰이 아니라 app.json의 expo-splash-screen.backgroundColor를 비추는 값이다.
+    // 어긋나면 네이티브 스플래시에서 JS로 넘어올 때 화면이 번쩍인다. 두 곳을 함께 고친다.
+    // 이 파일 전체가 Expo 템플릿 스플래시다. MediVU 스플래시를 만들 때 통째로 바뀐다.
+    // eslint-disable-next-line no-restricted-syntax
     backgroundColor: '#208AEF',
     alignItems: 'center',
     justifyContent: 'center',
